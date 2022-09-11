@@ -22,6 +22,9 @@ import AccountBar from "./AccountBar";
 import { useRouter } from "next/router";
 import AllManuscript from "./AllManuscript";
 import AddNewManuscript from "./AddNewMan";
+import ReviewScore from "./ReviewScore";
+import ScoreSubmitted from "./ScoreSubmitted";
+import Invitation from "./Invitation";
 
 const SideBar = () => {
   const router = useRouter();
@@ -30,11 +33,12 @@ const SideBar = () => {
     <Box
       fontFamily={"poppins"}
       pt="3rem"
-      w="17.3rem"
+      w="20%"
+      float={"left"}
       display="flex"
       flexDir={"column"}
       boxShadow="base"
-      h="100vh"
+      h="150vh"
     >
       <Box mb="2rem" px="13px">
         <Image src={logo} alt="nfmj logo" />
@@ -49,7 +53,7 @@ const SideBar = () => {
             pl="2.5rem"
             mb="1rem"
             type="search"
-            w="100"
+            w="100%"
             h="2.625rem"
             placeholder="Search"
             borderRadius={"5px"}
@@ -110,15 +114,14 @@ const SideBar = () => {
             </AccordionButton>
             <AccordionPanel>
               <Box w="100%" display={"flex"} flexDir="column">
-                <AllManuscript
-                  color={
-                    router.pathname === "/manuscript" ? "black" : "#8D91A0"
-                  }
+                <ReviewScore
+                  color={router.pathname === "/review" ? "black" : "#8D91A0"}
                 />
-                <AddNewManuscript
-                  color={
-                    router.pathname === "/manuscript" ? "black" : "#8D91A0"
-                  }
+                <ScoreSubmitted
+                  color={router.pathname === "/review" ? "black" : "#8D91A0"}
+                />
+                <Invitation
+                  color={router.pathname === "/review" ? "black" : "#8D91A0"}
                 />
               </Box>
             </AccordionPanel>
