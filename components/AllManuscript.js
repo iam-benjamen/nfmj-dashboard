@@ -5,7 +5,7 @@ import greendot from "../public/sidebar/greendot.svg";
 
 const AllManuscript = (props) => {
   return (
-    <NextLink passHref href="/manuscript">
+    <NextLink passHref href="/allmanuscript">
       <Box
         fontWeight={500}
         fontSize="1rem"

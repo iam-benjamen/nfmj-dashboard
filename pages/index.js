@@ -1,22 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import {
-  Box,
-  Select,
-  Text,
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-} from "@chakra-ui/react";
+import { Box, Select, Text } from "@chakra-ui/react";
 import MainBar from "../components/MainBar";
 import Wrapper from "../components/Wrapper";
 import { TriangleDownIcon } from "@chakra-ui/icons";
+
+import ManuscriptTable from "../components/ManuscriptTable";
 
 export default function Home() {
   return (
@@ -43,18 +32,20 @@ export default function Home() {
             pr={"1.5rem"}
             display={"flex"}
             justifyContent="space-between"
-            pb="3rem"
+            pb="1rem"
           >
             <Text fontWeight={500} fontSize="1.25rem">
               Manuscripts
             </Text>
             <Select
               icon={<TriangleDownIcon pl=".4rem" />}
-              w="11rem"
+              w="10rem"
               h="2.1rem"
               borderRadius="8px"
               focusBorderColor="none"
               bg="#E8EAF0"
+              fontSize="14px"
+              fontWeight={500}
               cursor="pointer"
             >
               <option value="all">All manuscripts</option>
@@ -62,192 +53,7 @@ export default function Home() {
               <option value="accepted">Accepted</option>
             </Select>
           </Box>
-          <Box  fontFamily={"poppins"} px="1rem">
-            <TableContainer maxH={'10rem'} overflowY={"scroll"}>
-              <Table variant="simple">
-                <Thead>
-                  <Tr pb="18px" borderBottom="1px solid #E8E9EB">
-                    <Th
-                      fontFamily={"poppins"}
-                      fontWeight={500}
-                      fontSize={"14px"}
-                      color="#979CA8"
-                      textTransform={"none"}
-                    >
-                      Manuscript Title
-                    </Th>
-                    <Th
-                      fontFamily={"poppins"}
-                      fontWeight={500}
-                      fontSize={"14px"}
-                      color="#979CA8"
-                      textTransform={"none"}
-                    >
-                      Type
-                    </Th>
-                    <Th
-                      fontFamily={"poppins"}
-                      fontWeight={500}
-                      fontSize={"14px"}
-                      color="#979CA8"
-                      textTransform={"none"}
-                    >
-                      Status
-                    </Th>
-                    <Th
-                      fontFamily={"poppins"}
-                      fontWeight={500}
-                      fontSize={"14px"}
-                      color="#979CA8"
-                      textTransform={"none"}
-                    >
-                      Comment
-                    </Th>
-                  </Tr>
-                </Thead>
-
-                <Tbody>
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-                  
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-
-                  <Tr>
-                    <Td>
-                      <Text fontWeight={500} fontSize="14px">
-                        Management of patients with elevated Self-BAT scores.
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} color="#758393" fontSize={"14px"}>
-                        Commentary
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                        PENDING
-                      </Text>
-                    </Td>
-                    <Td>
-                      <Text fontWeight={400} fontSize="14px">
-                        No Comment
-                      </Text>
-                    </Td>
-                  </Tr>
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </Box>
+          <ManuscriptTable />
         </Box>
       </Wrapper>
     </div>

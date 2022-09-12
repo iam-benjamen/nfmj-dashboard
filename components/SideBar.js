@@ -83,7 +83,7 @@ const SideBar = () => {
               <ManuscriptBar
                 _expanded={{ color: "black" }}
                 color={
-                  router.pathname.includes("/manuscript") ? "black" : "#8D91A0"
+                  router.pathname.includes("/allmanuscript") ? "black" : "#8D91A0"
                 }
                 text="Manuscript"
               />
@@ -93,7 +93,7 @@ const SideBar = () => {
               <Box w="100%" display={"flex"} flexDir="column">
                 <AllManuscript
                   color={
-                    router.pathname === "/manuscript" ? "black" : "#8D91A0"
+                    router.pathname === "/allmanuscript" ? "black" : "#8D91A0"
                   }
                 />
                 <AddNewManuscript
