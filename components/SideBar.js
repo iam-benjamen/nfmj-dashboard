@@ -25,6 +25,7 @@ import AddNewManuscript from "./AddNewMan";
 import ReviewScore from "./ReviewScore";
 import ScoreSubmitted from "./ScoreSubmitted";
 import Invitation from "./Invitation";
+import SearchInput from "./SearchInput";
 
 const SideBar = () => {
   const router = useRouter();
@@ -43,26 +44,7 @@ const SideBar = () => {
       <Box mb="2rem" px="13px">
         <Image src={logo} alt="nfmj logo" />
       </Box>
-      <form action="">
-        <InputGroup>
-          <InputLeftElement pl="2rem">
-            <Search2Icon color={"grey"} />
-          </InputLeftElement>
-          <Input
-            mx="13px"
-            pl="2.5rem"
-            mb="1rem"
-            type="search"
-            w="100%"
-            h="2.625rem"
-            placeholder="Search"
-            borderRadius={"5px"}
-            bg="#F6F8FA"
-            focusBorderColor="#8D91b9"
-            _placeholder={{ fontWeight: "500", fontSize: "14px" }}
-          />
-        </InputGroup>
-      </form>
+      <SearchInput />
 
       <Divider orientation="horizontal" />
       <Box
@@ -83,7 +65,7 @@ const SideBar = () => {
               <ManuscriptBar
                 _expanded={{ color: "black" }}
                 color={
-                  router.pathname.includes("/allmanuscript") ? "black" : "#8D91A0"
+                  router.pathname.includes("manuscript") ? "black" : "#8D91A0"
                 }
                 text="Manuscript"
               />
@@ -98,7 +80,7 @@ const SideBar = () => {
                 />
                 <AddNewManuscript
                   color={
-                    router.pathname === "/manuscript" ? "black" : "#8D91A0"
+                    router.pathname === "/addmanuscript" ? "black" : "#8D91A0"
                   }
                 />
               </Box>

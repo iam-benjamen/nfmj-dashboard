@@ -5,7 +5,7 @@ import yellowdot from "../public/sidebar/yellowdot.svg";
 
 const AddNewManuscript = (props) => {
   return (
-    <NextLink passHref href="/manuscript">
+    <NextLink passHref href="/addmanuscript">
       <Box
         fontWeight={500}
         fontSize="1rem"

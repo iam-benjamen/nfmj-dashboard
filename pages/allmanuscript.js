@@ -1,7 +1,8 @@
 import { TriangleDownIcon } from "@chakra-ui/icons";
-import { Box, Button, Select, Text } from "@chakra-ui/react";
+import { Box, Button, Select, Text, Link } from "@chakra-ui/react";
 import ManuscriptTable from "../components/ManuscriptTable";
 import Wrapper from "../components/Wrapper";
+import NextLink from "next/link";
 
 const ManuScript = () => {
   return (
@@ -33,20 +34,23 @@ const ManuScript = () => {
           </Select>
         </Box>
         <Box>
-          <Button
-            fontSize={"14px"}
-            color="white"
-            borderRadius="8px"
-            bg="#CA251C"
-            h="2.6rem"
-            _hover={{ transform: "translateY(-10%)" }}
-          >
-            Add New Manuscript
-          </Button>
+          <NextLink passHref href="/addmanuscript">
+            <Button
+              as={Link}
+              fontSize={"14px"}
+              color="white"
+              borderRadius="8px"
+              bg="#CA251C"
+              h="2.6rem"
+              _hover={{ transform: "translateY(-10%)" }}
+            >
+              Add New Manuscript
+            </Button>
+          </NextLink>
         </Box>
       </Box>
       <Box w="100%" bg="#F7F6F9" borderRadius={"12px"}>
-        <ManuscriptTable />
+        <ManuscriptTable maxH="30rem" />
       </Box>
     </Wrapper>
   );

@@ -12,10 +12,10 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 
-const ManuscriptTable = () => {
+const ManuscriptTable = (props) => {
   return (
     <Box fontFamily={"poppins"} px="1rem">
-      <TableContainer maxH={"30rem"} pt="1rem" overflowY={"scroll"}>
+      <TableContainer maxH={props.maxH} pt="1rem" overflowY={"scroll"}>
         <Table variant="simple">
           <Thead>
             <Tr pb="18px" borderBottom="1px solid #E8E9EB">
@@ -94,8 +94,8 @@ const ManuscriptTable = () => {
                 </Text>
               </Td>
               <Td>
-                <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                  PENDING
+                <Text color={"#B93E5C"} fontWeight={500} fontSize="14px">
+                  REJECTED{" "}
                 </Text>
               </Td>
               <Td>
@@ -117,8 +117,8 @@ const ManuscriptTable = () => {
                 </Text>
               </Td>
               <Td>
-                <Text color={"#FF9900"} fontWeight={500} fontSize="14px">
-                  PENDING
+                <Text color={"#3EAA86"} fontWeight={500} fontSize="14px">
+                  ACCEPTED
                 </Text>
               </Td>
               <Td>

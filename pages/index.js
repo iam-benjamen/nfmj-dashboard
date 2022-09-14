@@ -53,7 +53,7 @@ export default function Home() {
               <option value="accepted">Accepted</option>
             </Select>
           </Box>
-          <ManuscriptTable />
+          <ManuscriptTable maxH="20rem" />
         </Box>
       </Wrapper>
     </div>
