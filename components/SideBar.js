@@ -59,7 +59,7 @@ const SideBar = () => {
           color={router.pathname === "/" ? "black" : "#8D91A0"}
           text="Dashboard"
         />
-        <Accordion allowMultiple>
+        <Accordion allowToggle>
           <AccordionItem border="none" pb="1rem">
             <AccordionButton>
               <ManuscriptBar
@@ -90,7 +90,7 @@ const SideBar = () => {
           <AccordionItem border="none">
             <AccordionButton>
               <ReviewBar
-                color={router.pathname === "/review" ? "black" : "#8D91A0"}
+                color={router.pathname.includes("review") ? "black" : "#8D91A0"}
                 text="Review"
               />
             </AccordionButton>
@@ -100,10 +100,14 @@ const SideBar = () => {
                   color={router.pathname === "/review" ? "black" : "#8D91A0"}
                 />
                 <ScoreSubmitted
-                  color={router.pathname === "/review" ? "black" : "#8D91A0"}
+                  color={
+                    router.pathname === "/review-score" ? "black" : "#8D91A0"
+                  }
                 />
                 <Invitation
-                  color={router.pathname === "/review" ? "black" : "#8D91A0"}
+                  color={
+                    router.pathname === "/review-invitation" ? "black" : "#8D91A0"
+                  }
                 />
               </Box>
             </AccordionPanel>

@@ -62,7 +62,7 @@ const AddManuscript = () => {
             borderRadius="12px"
             px="2rem"
             pt="1.5rem"
-            h="26rem"
+            h="30rem"
           >
             <Text pb="13px" fontWeight={500} fontSize="22px">
               Abstract
@@ -81,6 +81,7 @@ const AddManuscript = () => {
             borderRadius="12px"
             px="2rem"
             pt="1.5rem"
+            h="18rem"
           >
             <Text pb="13px" fontWeight={500} fontSize="22px">
               Attributes
@@ -94,6 +95,7 @@ const AddManuscript = () => {
               minH="6.5rem"
               borderRadius="12px"
               bg="white"
+              h='70%'
             ></Textarea>
           </Box>
         </Box>

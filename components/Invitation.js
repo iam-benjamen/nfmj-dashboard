@@ -5,7 +5,7 @@ import reddot from "../public/sidebar/reddot.svg";
 
 const Invitation = (props) => {
   return (
-    <NextLink passHref href="/review">
+    <NextLink passHref href="/review-invitation">
       <Box
         fontWeight={500}
         fontSize="1rem"

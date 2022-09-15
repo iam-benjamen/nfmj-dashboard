@@ -5,7 +5,7 @@ import greendot from "../public/sidebar/greendot.svg";
 
 const ScoreSubmitted = (props) => {
   return (
-    <NextLink passHref href="/review">
+    <NextLink passHref href="/review-score">
       <Box
         fontWeight={500}
         fontSize="1rem"
