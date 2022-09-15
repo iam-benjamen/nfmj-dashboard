@@ -39,7 +39,7 @@ const SideBar = () => {
       display="flex"
       flexDir={"column"}
       boxShadow="base"
-      h="150vh"
+      h="120vh"
     >
       <Box mb="2rem" px="13px">
         <Image src={logo} alt="nfmj logo" />
