@@ -178,6 +178,63 @@ const Account = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box pt="4rem" id="institution" w="80%" display={"flex"} flexDir="column">
+        <Text pb=".5rem" fontWeight={500} fontSize="lg">
+          Institution
+        </Text>
+        <Text fontSize={"13px"} color="#898FA3">
+          Update institutions’ details
+        </Text>
+
+        <Box
+          pt="3rem"
+          display={"flex"}
+          alignItems="flex-start"
+          justifyContent="space-between"
+        >
+          <Text fontSize={"1rem"} fontWeight={400}>
+            Institution
+          </Text>
+          <Box w="70%">
+            <Input
+              focusBorderColor="grey"
+              border="1px solid #CCCCCC"
+              borderRadius="5px"
+              h="3rem"
+              fontSize="18px"
+              type="text"
+              placeholder="University of Ibadan"
+              _placeholder={{ color: "black" }}
+              color="black"
+            />
+          </Box>
+        </Box>
+
+        <Box
+          pt="3rem"
+          display={"flex"}
+          alignItems="flex-start"
+          justifyContent="space-between"
+        >
+          <Text fontSize={"1rem"} fontWeight={400}>
+            Department
+          </Text>
+          <Box w="70%">
+            <Input
+              focusBorderColor="grey"
+              border="1px solid #CCCCCC"
+              borderRadius="5px"
+              h="3rem"
+              fontSize="18px"
+              type="text"
+              placeholder="Medicine"
+              _placeholder={{ color: "black" }}
+              color="black"
+            />
+          </Box>
+        </Box>
+      </Box>
     </Wrapper>
   );
 };
